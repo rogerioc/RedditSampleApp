@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  HotMartTest
+
+  Created by rogerio on 10/07/20.
+  Copyright © 2020 rogerio. All rights reserved.
+*/
+
+"home.title" = "Home";
+"detail.about" = "Sobre";
+"button.ok" = "Ok";
+"alert.title.alert" = "Alerta";
+"alert.desciption.networkerro" = "Ocorreu um erro, por favor tente mais tarde";
