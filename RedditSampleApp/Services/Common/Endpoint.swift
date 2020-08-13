@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 struct Endpoint {
-    var enviroment: Environment
+    var enviroment: EnvironmentType
     var endpointTypeProtocol: EndpointTypeProtocol
 }
 
@@ -19,7 +19,7 @@ extension Endpoint: URLRequestConvertible {
     func asURLRequest() throws -> URLRequest {
         let url = enviroment.getBaseUrl()
         var urlRequest = URLRequest(url: url.appendingPathComponent(endpointTypeProtocol.path))
-        urlRequest.httpMethod = endpointTypeProtocol.method.rawValue    
+        urlRequest.httpMethod = endpointTypeProtocol.method.rawValue
         return urlRequest
     }
     

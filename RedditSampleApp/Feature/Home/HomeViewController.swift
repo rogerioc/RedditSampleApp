@@ -11,9 +11,12 @@ import UIKit
 
 final class HomeViewController: UIViewController, HomeViewControllerType {
     var contentView: HomeViewType
+    let viewmodel: HomeViewModelType
     
-    public init(contentView: HomeViewType) {
+    public init(contentView: HomeViewType,
+                viewmodel: HomeViewModelType) {
         self.contentView = contentView
+        self.viewmodel = viewmodel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -24,11 +27,13 @@ final class HomeViewController: UIViewController, HomeViewControllerType {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        viewmodel.viewDidLoad()
     }
     
     private func setup() {
         view.addSubview(contentView)
         contentView.bindFrameToSuperviewBounds()
+        
     }
     
 }

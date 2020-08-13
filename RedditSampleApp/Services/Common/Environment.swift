@@ -8,11 +8,11 @@
 
 import Foundation
 
-public protocol Environment {
+public protocol EnvironmentType {
     func getBaseUrl() -> URL
 }
 
-public class EnvironmentString: Environment {
+public class EnvironmentString: EnvironmentType {
     
     public func getBaseUrl() -> URL {
         URL(string: "https://www.reddit.com/r/")!

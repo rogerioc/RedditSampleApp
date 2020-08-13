@@ -13,13 +13,19 @@ protocol FactoryViewControllerType {
 }
 
 final class FactoryViewController: FactoryViewControllerType {
-    var factoryView: FactoryViewType
-    init(factoryView: FactoryViewType) {
+    let factoryView: FactoryViewType
+    let factoryViewModel: FactoryViewModelType
+    
+    init(factoryView: FactoryViewType,
+         factoryViewModelType: FactoryViewModelType) {
         self.factoryView = factoryView
+        self.factoryViewModel = factoryViewModelType
     }
     
     func makeHomeViewController() -> HomeViewControllerType {
         let view = factoryView.makeHomeView()
-        return HomeViewController(contentView: view)
+        let viewModel = factoryViewModel.makeHomeViewModel()
+        return HomeViewController(contentView: view,
+                                  viewmodel: viewModel)
     }
 }

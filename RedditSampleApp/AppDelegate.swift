@@ -25,7 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.rootViewController = navigationController
         let viewFactory = FactoryView()
-        flowMain = FlowControllerMain(navigationController: navigationController, factory: FactoryViewController(factoryView: viewFactory))
+        let factoryViewModel = FactoryRedditProject.makeFactoryViewModel()
+
+        flowMain = FlowControllerMain(navigationController: navigationController, factory: FactoryViewController(factoryView: viewFactory,
+                                                                                                                 factoryViewModelType: factoryViewModel))
         window?.makeKeyAndVisible()
         flowMain?.start()
         return true
