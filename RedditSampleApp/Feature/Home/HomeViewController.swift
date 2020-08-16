@@ -28,6 +28,10 @@ final class HomeViewController: UIViewController, HomeViewControllerType {
         super.viewDidLoad()
         setup()
         viewmodel.viewDidLoad()
+        viewmodel.updateView = { [weak self] posts in
+            self?.contentView.setUpdateList(with: posts)
+        }
+        
     }
     
     private func setup() {

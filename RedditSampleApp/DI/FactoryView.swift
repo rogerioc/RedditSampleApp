@@ -9,8 +9,15 @@
 import Foundation
 
 final class FactoryView: FactoryViewType {
+    let factoryViewModel: FactoryViewModelType
+
+    init(factoryViewModel: FactoryViewModelType) {
+        self.factoryViewModel = factoryViewModel
+    }
+    
     func makeHomeView() -> HomeViewType {
-        return HomeView()
+        let postListViewModel = factoryViewModel.makeViewPostListViewModel()
+        return HomeView(postListViewModelType: postListViewModel)
     }    
     
 }

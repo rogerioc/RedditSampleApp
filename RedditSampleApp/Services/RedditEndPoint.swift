@@ -24,7 +24,7 @@ enum RedditEndPoint: EndpointTypeProtocol {
     var path: String {
         switch self {
             case .list(let posts):
-                return "/\(posts)"
+                return "\(posts)"
         }
     }
     

@@ -9,5 +9,6 @@
 import Foundation
 
 protocol HomeViewType: ViewType {
+    func setUpdateList(with postsViewEntity: [PostViewEntity])
     
 }

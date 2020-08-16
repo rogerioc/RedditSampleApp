@@ -12,23 +12,21 @@ struct ChildData: Codable {
     let approvedAtUTC: String?
     let subreddit, selftext, authorFullname, title: String?
     let subredditNamePrefixed, name: String?
-    let linkFlairText: String?
     let score, created: Int?
     let urlOverriddenByDest: String?
     let viewCount: String?
     let numComments: Int?
 
     enum CodingKeys: String, CodingKey {
-        case approvedAtUTC
+        case approvedAtUTC = "approved_at_utc"
         case subreddit, selftext
-        case authorFullname
+        case authorFullname = "author_fullname"
         case title
-        case subredditNamePrefixed
+        case subredditNamePrefixed = "subreddit_name_prefixed"
         case name
-        case linkFlairText
         case score, created
-        case urlOverriddenByDest
-        case viewCount
-        case numComments
+        case urlOverriddenByDest = "url_overridden_by_dest"
+        case viewCount = "view_count"
+        case numComments = "num_comments"
     }
 }

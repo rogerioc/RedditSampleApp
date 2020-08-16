@@ -10,6 +10,7 @@ import Foundation
 
 protocol FactoryViewModelType: AnyObject {
     func makeHomeViewModel() -> HomeViewModelType
+    func makeViewPostListViewModel() -> PostListViewModelType
 }
 
 final class FactoryViewModel: FactoryViewModelType {
@@ -21,5 +22,9 @@ final class FactoryViewModel: FactoryViewModelType {
     
     func makeHomeViewModel() -> HomeViewModelType {
         return HomeViewModel(postsUseCase: factoryUseCaseType.makePostsUseCase())
+    }
+    
+    func makeViewPostListViewModel() -> PostListViewModelType {
+        PostListViewModel()
     }
 }

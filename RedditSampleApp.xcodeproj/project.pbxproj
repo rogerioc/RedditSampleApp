@@ -31,6 +31,15 @@
 		33A86E0324E4BFD600026EAD /* FactoryRepositoriesType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E0224E4BFD600026EAD /* FactoryRepositoriesType.swift */; };
 		33A86E0524E4C05900026EAD /* FactoryEnviromentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E0424E4C05900026EAD /* FactoryEnviromentType.swift */; };
 		33A86E0724E4C23200026EAD /* FactoryRedditProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E0624E4C23200026EAD /* FactoryRedditProject.swift */; };
+		33A86E0A24E7343E00026EAD /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E0924E7343E00026EAD /* PostCell.swift */; };
+		33A86E0C24E7346100026EAD /* PostViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E0B24E7346100026EAD /* PostViewType.swift */; };
+		33A86E0E24E7348500026EAD /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E0D24E7348500026EAD /* PostView.swift */; };
+		33A86E1524E73D6700026EAD /* PostCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E1424E73D6700026EAD /* PostCellViewModel.swift */; };
+		33A86E1824E73DE400026EAD /* PostViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E1724E73DE400026EAD /* PostViewEntity.swift */; };
+		33A86E1B24E7407100026EAD /* PostListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E1A24E7407100026EAD /* PostListType.swift */; };
+		33A86E1D24E740BE00026EAD /* PostListUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E1C24E740BE00026EAD /* PostListUIView.swift */; };
+		33A86E1F24E745AD00026EAD /* PostListViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E1E24E745AD00026EAD /* PostListViewModelType.swift */; };
+		33A86E2124E761C900026EAD /* ChildExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E2024E761C900026EAD /* ChildExtension.swift */; };
 		33F0852824E214CD00332783 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330EB88D24E2137300277210 /* Alamofire.framework */; };
 		33F0852F24E2F58800332783 /* FlowControllerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0852E24E2F58800332783 /* FlowControllerMain.swift */; };
 		33F0853224E2F5A800332783 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0853124E2F5A800332783 /* HomeView.swift */; };
@@ -44,7 +53,7 @@
 		33F0854C24E32E3C00332783 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0854224E32E3C00332783 /* StringExtension.swift */; };
 		33F0854D24E32E3C00332783 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0854324E32E3C00332783 /* UIColorExtension.swift */; };
 		33F0854E24E32E3C00332783 /* CustomAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0854424E32E3C00332783 /* CustomAlerts.swift */; };
-		33F0854F24E32E3C00332783 /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0854624E32E3C00332783 /* DefaultView.swift */; };
+		33F0854F24E32E3C00332783 /* DefaultUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0854624E32E3C00332783 /* DefaultUIView.swift */; };
 		33F0855024E32E3C00332783 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0854724E32E3C00332783 /* UIViewControllerExtension.swift */; };
 		33F0855124E32E3C00332783 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0854824E32E3C00332783 /* ReusableView.swift */; };
 		33F0855424E3305700332783 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33F0855324E3305700332783 /* Localizable.strings */; };
@@ -98,6 +107,15 @@
 		33A86E0224E4BFD600026EAD /* FactoryRepositoriesType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryRepositoriesType.swift; sourceTree = "<group>"; };
 		33A86E0424E4C05900026EAD /* FactoryEnviromentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryEnviromentType.swift; sourceTree = "<group>"; };
 		33A86E0624E4C23200026EAD /* FactoryRedditProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryRedditProject.swift; sourceTree = "<group>"; };
+		33A86E0924E7343E00026EAD /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		33A86E0B24E7346100026EAD /* PostViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewType.swift; sourceTree = "<group>"; };
+		33A86E0D24E7348500026EAD /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		33A86E1424E73D6700026EAD /* PostCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellViewModel.swift; sourceTree = "<group>"; };
+		33A86E1724E73DE400026EAD /* PostViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewEntity.swift; sourceTree = "<group>"; };
+		33A86E1A24E7407100026EAD /* PostListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListType.swift; sourceTree = "<group>"; };
+		33A86E1C24E740BE00026EAD /* PostListUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListUIView.swift; sourceTree = "<group>"; };
+		33A86E1E24E745AD00026EAD /* PostListViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModelType.swift; sourceTree = "<group>"; };
+		33A86E2024E761C900026EAD /* ChildExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildExtension.swift; sourceTree = "<group>"; };
 		33F0852E24E2F58800332783 /* FlowControllerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowControllerMain.swift; sourceTree = "<group>"; };
 		33F0853124E2F5A800332783 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		33F0853324E2F5E100332783 /* HomeViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewType.swift; sourceTree = "<group>"; };
@@ -110,7 +128,7 @@
 		33F0854224E32E3C00332783 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		33F0854324E32E3C00332783 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		33F0854424E32E3C00332783 /* CustomAlerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlerts.swift; sourceTree = "<group>"; };
-		33F0854624E32E3C00332783 /* DefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultView.swift; sourceTree = "<group>"; };
+		33F0854624E32E3C00332783 /* DefaultUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultUIView.swift; sourceTree = "<group>"; };
 		33F0854724E32E3C00332783 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		33F0854824E32E3C00332783 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		33F0855324E3305700332783 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -245,6 +263,36 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		33A86E0824E7342000026EAD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				33A86E0924E7343E00026EAD /* PostCell.swift */,
+				33A86E0B24E7346100026EAD /* PostViewType.swift */,
+				33A86E0D24E7348500026EAD /* PostView.swift */,
+				33A86E1424E73D6700026EAD /* PostCellViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		33A86E1624E73DCC00026EAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33A86E1724E73DE400026EAD /* PostViewEntity.swift */,
+				33A86E2024E761C900026EAD /* ChildExtension.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33A86E1924E7405300026EAD /* List */ = {
+			isa = PBXGroup;
+			children = (
+				33A86E1A24E7407100026EAD /* PostListType.swift */,
+				33A86E1C24E740BE00026EAD /* PostListUIView.swift */,
+				33A86E1E24E745AD00026EAD /* PostListViewModelType.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		33F0852924E2163F00332783 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +351,9 @@
 		33F0853024E2F59200332783 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				33A86E1924E7405300026EAD /* List */,
+				33A86E1624E73DCC00026EAD /* Model */,
+				33A86E0824E7342000026EAD /* Cell */,
 				33A86DFA24E4B65100026EAD /* ViewModel */,
 				33F0855524E332D400332783 /* View */,
 				33F0855624E332EC00332783 /* HomeViewControllerType.swift */,
@@ -329,7 +380,7 @@
 		33F0854524E32E3C00332783 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				33F0854624E32E3C00332783 /* DefaultView.swift */,
+				33F0854624E32E3C00332783 /* DefaultUIView.swift */,
 				33F0855A24E3337200332783 /* ViewType.swift */,
 			);
 			path = View;
@@ -476,14 +527,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A86E0C24E7346100026EAD /* PostViewType.swift in Sources */,
 				33F0855B24E3337200332783 /* ViewType.swift in Sources */,
 				33A86DE424E4AAA700026EAD /* Endpoint.swift in Sources */,
 				330EB86924E20B8100277210 /* ViewController.swift in Sources */,
 				330EB86524E20B8100277210 /* AppDelegate.swift in Sources */,
 				33F0855F24E35A8900332783 /* FactoryView.swift in Sources */,
 				33F0855024E32E3C00332783 /* UIViewControllerExtension.swift in Sources */,
-				33F0854F24E32E3C00332783 /* DefaultView.swift in Sources */,
+				33F0854F24E32E3C00332783 /* DefaultUIView.swift in Sources */,
 				33F0856124E35F3F00332783 /* UIViewExtension.swift in Sources */,
+				33A86E1824E73DE400026EAD /* PostViewEntity.swift in Sources */,
 				33A86DF024E4AF5200026EAD /* ChildData.swift in Sources */,
 				33F0855D24E3595A00332783 /* FactoryViewType.swift in Sources */,
 				33A86DFC24E4B66400026EAD /* HomeViewModel.swift in Sources */,
@@ -492,6 +545,7 @@
 				33A86DF224E4B22C00026EAD /* PostsRepository.swift in Sources */,
 				33F0854E24E32E3C00332783 /* CustomAlerts.swift in Sources */,
 				33A86DF724E4B50500026EAD /* PostsUseCaseType.swift in Sources */,
+				33A86E2124E761C900026EAD /* ChildExtension.swift in Sources */,
 				33A86DF924E4B5C900026EAD /* PostsUseCase.swift in Sources */,
 				33F0854924E32E3C00332783 /* Texts.swift in Sources */,
 				33A86DE724E4AAF900026EAD /* RedditEndPoint.swift in Sources */,
@@ -501,10 +555,14 @@
 				33A86DEC24E4AEFC00026EAD /* PostsData.swift in Sources */,
 				33A86DF424E4B31E00026EAD /* CustomError.swift in Sources */,
 				33F0852F24E2F58800332783 /* FlowControllerMain.swift in Sources */,
+				33A86E1D24E740BE00026EAD /* PostListUIView.swift in Sources */,
 				33A86DEA24E4AECD00026EAD /* Posts.swift in Sources */,
 				33A86E0324E4BFD600026EAD /* FactoryRepositoriesType.swift in Sources */,
 				33A86E0524E4C05900026EAD /* FactoryEnviromentType.swift in Sources */,
 				33F0854B24E32E3C00332783 /* UImageExtension.swift in Sources */,
+				33A86E1524E73D6700026EAD /* PostCellViewModel.swift in Sources */,
+				33A86E0A24E7343E00026EAD /* PostCell.swift in Sources */,
+				33A86E1B24E7407100026EAD /* PostListType.swift in Sources */,
 				33A86E0024E4BF3700026EAD /* FactoryUseCaseType.swift in Sources */,
 				33F0853424E2F5E100332783 /* HomeViewType.swift in Sources */,
 				33F0855724E332EC00332783 /* HomeViewControllerType.swift in Sources */,
@@ -516,7 +574,9 @@
 				33F0853224E2F5A800332783 /* HomeView.swift in Sources */,
 				33A86E0724E4C23200026EAD /* FactoryRedditProject.swift in Sources */,
 				33F0854A24E32E3C00332783 /* UIFontExtension.swift in Sources */,
+				33A86E1F24E745AD00026EAD /* PostListViewModelType.swift in Sources */,
 				33A86DE224E4A9DB00026EAD /* EndpointTypeProtocol.swift in Sources */,
+				33A86E0E24E7348500026EAD /* PostView.swift in Sources */,
 				33F0853924E2FAA000332783 /* Metrics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,7 +661,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -655,7 +715,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -676,6 +736,7 @@
 					"$(PROJECT_DIR)/vendor/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = RedditSampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -698,6 +759,7 @@
 					"$(PROJECT_DIR)/vendor/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = RedditSampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

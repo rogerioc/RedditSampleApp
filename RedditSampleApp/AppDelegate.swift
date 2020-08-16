@@ -24,9 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
         window?.rootViewController = navigationController
-        let viewFactory = FactoryView()
+        
         let factoryViewModel = FactoryRedditProject.makeFactoryViewModel()
-
+        let viewFactory = FactoryView(factoryViewModel: factoryViewModel)
+        
         flowMain = FlowControllerMain(navigationController: navigationController, factory: FactoryViewController(factoryView: viewFactory,
                                                                                                                  factoryViewModelType: factoryViewModel))
         window?.makeKeyAndVisible()

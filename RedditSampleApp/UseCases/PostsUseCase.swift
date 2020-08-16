@@ -17,7 +17,7 @@ final class PostsUseCase: PostsUseCaseType {
     }
     
     func execute(success: @escaping (Posts) -> (), failure: @escaping (CustomError) -> ()) {
-        repository.fetchPosts(type: "programming", success: success, failure: failure)
+        repository.fetchPosts(type: "programming.json", success: success, failure: failure)
     }
     
 }

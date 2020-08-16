@@ -9,11 +9,13 @@
 import Foundation
 
 protocol HomeViewModelType: AnyObject {
+    var updateView: (([PostViewEntity]) -> Void)? { get set }
     func viewDidLoad()
 }
 
 final class HomeViewModel: HomeViewModelType {
-    
+    var updateView: (([PostViewEntity]) -> Void)?
+        
     let postsUseCase: PostsUseCaseType
     
     init(postsUseCase: PostsUseCaseType) {
@@ -22,8 +24,10 @@ final class HomeViewModel: HomeViewModelType {
     
     
     func viewDidLoad() {
-        postsUseCase.execute(success: { posts in
-            debugPrint(posts.data)
+        postsUseCase.execute(success: { [weak self] posts in
+            let data = posts.data?.children?.toPostsViewEntity()
+            guard let _data = data else { return }
+            self?.updateView?(_data)
             
         }, failure: { error in
             debugPrint(error)

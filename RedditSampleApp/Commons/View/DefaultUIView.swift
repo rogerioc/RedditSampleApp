@@ -13,7 +13,15 @@ protocol DefaultViewType {
   func setupConstraints()
 }
 
-class DefaultView: UIView, DefaultViewType {
+class DefaultUIView: UIView, DefaultViewType {
+    func buildHierarch() {
+        
+    }
+    
+    func setupConstraints() {
+        
+    }
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,13 +35,5 @@ class DefaultView: UIView, DefaultViewType {
         setupConstraints()
     }
     
-    func buildHierarch() {
-        
-    }
-    
-    func setupConstraints() {
-        
-    }
-    
-    
 }
+

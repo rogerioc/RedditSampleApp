@@ -9,22 +9,42 @@
 import Foundation
 import UIKit
 
-final class HomeView: DefaultView, HomeViewType {
+final class HomeView: DefaultUIView, HomeViewType {
+    var postListViewModelType: PostListViewModelType?
     
-    private lazy var buttonOk: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.heightAnchor.constraint(equalToConstant: Metrics.Button.height).isActive = true
-        return button
+    init(postListViewModelType: PostListViewModelType) {
+        self.postListViewModelType = postListViewModelType
+        super.init(frame: .zero)
+    }
+    
+    required init?(coder: NSCoder) {
+        return nil
+    }
+    
+    private lazy var list: PostListUIView = {
+        let list = PostListUIView()
+        list.translatesAutoresizingMaskIntoConstraints = false
+        list.heightAnchor.constraint(equalToConstant: Metrics.Button.height).isActive = true
+        return list
     }()
     
     override func buildHierarch() {
         backgroundColor = .white
-        addSubview(buttonOk)
+        addSubview(list)
+        guard let postListViewModelType = postListViewModelType else { return }
+        list.setViewModel(with: postListViewModelType)
+        list.viewDidLoad()
+        
     }
     
     override func setupConstraints() {
-        buttonOk.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        buttonOk.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        list.bindFrameToSuperviewBounds()
+    }
+    
+}
+
+extension HomeView {
+    func setUpdateList(with postsViewEntity: [PostViewEntity]) {
+        postListViewModelType?.setList(with: postsViewEntity)
     }
 }
