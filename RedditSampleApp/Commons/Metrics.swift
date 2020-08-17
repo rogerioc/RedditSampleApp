@@ -13,4 +13,7 @@ enum Metrics {
     enum Button {
         static let height: CGFloat = 40
     }
+    enum Cell {
+        static let height: CGFloat = 40
+    }
 }

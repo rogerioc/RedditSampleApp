@@ -24,7 +24,6 @@ final class HomeView: DefaultUIView, HomeViewType {
     private lazy var list: PostListUIView = {
         let list = PostListUIView()
         list.translatesAutoresizingMaskIntoConstraints = false
-        list.heightAnchor.constraint(equalToConstant: Metrics.Button.height).isActive = true
         return list
     }()
     
