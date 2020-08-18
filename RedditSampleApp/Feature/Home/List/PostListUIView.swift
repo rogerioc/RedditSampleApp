@@ -59,4 +59,7 @@ extension PostListUIView: UITableViewDataSource {
 
 extension PostListUIView: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel?.select(index: indexPath.row)
+    }
 }

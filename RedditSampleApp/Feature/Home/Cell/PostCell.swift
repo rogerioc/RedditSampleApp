@@ -34,8 +34,15 @@ final class PostCell: UITableViewCell {
     
     private func bind(){
         guard let contentViewCell = contentViewCell else { return }
+        removeViews()
         addSubview(contentViewCell.content)
         contentViewCell.content.bindFrameToSuperviewBounds()
+    }
+    
+    private func removeViews() {
+        _ = subviews.compactMap { (view) in
+            view.removeFromSuperview()
+        }
     }
     
     func setup() {

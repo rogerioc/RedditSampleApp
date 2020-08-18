@@ -9,7 +9,7 @@
 import Foundation
 
 protocol FactoryViewControllerType {
-    func makeHomeViewController() -> HomeViewControllerType
+    func makeHomeViewController(delegate: HomeViewFlowDelegate) -> HomeViewControllerType
 }
 
 final class FactoryViewController: FactoryViewControllerType {
@@ -22,10 +22,11 @@ final class FactoryViewController: FactoryViewControllerType {
         self.factoryViewModel = factoryViewModelType
     }
     
-    func makeHomeViewController() -> HomeViewControllerType {
+    func makeHomeViewController(delegate: HomeViewFlowDelegate) -> HomeViewControllerType {
         let view = factoryView.makeHomeView()
         let viewModel = factoryViewModel.makeHomeViewModel()
         return HomeViewController(contentView: view,
-                                  viewmodel: viewModel)
+                                  viewmodel: viewModel,
+                                  delegate: delegate)
     }
 }

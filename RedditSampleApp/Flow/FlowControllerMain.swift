@@ -27,8 +27,17 @@ final class FlowControllerMain: FlowControllerType {
     }
     
     private func startHome() {
-        let viewController = factory.makeHomeViewController()
+        let viewController = factory.makeHomeViewController(delegate: self)
         push(viewController: viewController)
     }
             
+}
+
+extension FlowControllerMain: HomeViewFlowDelegate {
+    func flow(to: HomeFlow) {
+        
+    }
+    
+    
+       
 }

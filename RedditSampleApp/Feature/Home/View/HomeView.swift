@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 final class HomeView: DefaultUIView, HomeViewType {
+    var selectedItem: ((PostViewEntity) -> Void)?
+    
     var postListViewModelType: PostListViewModelType?
     
     init(postListViewModelType: PostListViewModelType) {
@@ -32,6 +34,8 @@ final class HomeView: DefaultUIView, HomeViewType {
         addSubview(list)
         guard let postListViewModelType = postListViewModelType else { return }
         list.setViewModel(with: postListViewModelType)
+        self.postListViewModelType?.delegate = self
+
         list.viewDidLoad()
         
     }
@@ -46,4 +50,13 @@ extension HomeView {
     func setUpdateList(with postsViewEntity: [PostViewEntity]) {
         postListViewModelType?.setList(with: postsViewEntity)
     }
+}
+
+
+extension HomeView: PostListDelegate {
+    func selectedItem(item: PostViewEntity) {
+        selectedItem?(item)
+    }
+    
+    
 }

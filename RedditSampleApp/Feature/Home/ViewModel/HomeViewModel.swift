@@ -10,10 +10,12 @@ import Foundation
 
 protocol HomeViewModelType: AnyObject {
     var updateView: (([PostViewEntity]) -> Void)? { get set }
+    func selectedItem(item: PostViewEntity)
     func viewDidLoad()
 }
 
 final class HomeViewModel: HomeViewModelType {
+    
     var updateView: (([PostViewEntity]) -> Void)?
         
     let postsUseCase: PostsUseCaseType
@@ -22,6 +24,9 @@ final class HomeViewModel: HomeViewModelType {
         self.postsUseCase = postsUseCase
     }
     
+    func selectedItem(item: PostViewEntity) {
+        
+    }
     
     func viewDidLoad() {
         postsUseCase.execute(success: { [weak self] posts in
@@ -33,5 +38,6 @@ final class HomeViewModel: HomeViewModelType {
             debugPrint(error)
         })
     }
+        
     
 }

@@ -40,6 +40,13 @@
 		33A86E1D24E740BE00026EAD /* PostListUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E1C24E740BE00026EAD /* PostListUIView.swift */; };
 		33A86E1F24E745AD00026EAD /* PostListViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E1E24E745AD00026EAD /* PostListViewModelType.swift */; };
 		33A86E2124E761C900026EAD /* ChildExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E2024E761C900026EAD /* ChildExtension.swift */; };
+		33A86E2924EB477000026EAD /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33A86E2524EB477000026EAD /* OpenSans-Semibold.ttf */; };
+		33A86E2A24EB477000026EAD /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33A86E2624EB477000026EAD /* OpenSans-Light.ttf */; };
+		33A86E2B24EB477000026EAD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33A86E2724EB477000026EAD /* OpenSans-Regular.ttf */; };
+		33A86E2C24EB477000026EAD /* helvetica-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33A86E2824EB477000026EAD /* helvetica-bold.otf */; };
+		33A86E2E24EB4CD200026EAD /* PostListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E2D24EB4CD200026EAD /* PostListDelegate.swift */; };
+		33A86E3024EB516E00026EAD /* HomeViewFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E2F24EB516E00026EAD /* HomeViewFlowDelegate.swift */; };
+		33A86E3224EB51A400026EAD /* HomeFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E3124EB51A400026EAD /* HomeFlow.swift */; };
 		33F0852824E214CD00332783 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330EB88D24E2137300277210 /* Alamofire.framework */; };
 		33F0852F24E2F58800332783 /* FlowControllerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0852E24E2F58800332783 /* FlowControllerMain.swift */; };
 		33F0853224E2F5A800332783 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0853124E2F5A800332783 /* HomeView.swift */; };
@@ -116,6 +123,13 @@
 		33A86E1C24E740BE00026EAD /* PostListUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListUIView.swift; sourceTree = "<group>"; };
 		33A86E1E24E745AD00026EAD /* PostListViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModelType.swift; sourceTree = "<group>"; };
 		33A86E2024E761C900026EAD /* ChildExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildExtension.swift; sourceTree = "<group>"; };
+		33A86E2524EB477000026EAD /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		33A86E2624EB477000026EAD /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		33A86E2724EB477000026EAD /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		33A86E2824EB477000026EAD /* helvetica-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "helvetica-bold.otf"; sourceTree = "<group>"; };
+		33A86E2D24EB4CD200026EAD /* PostListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListDelegate.swift; sourceTree = "<group>"; };
+		33A86E2F24EB516E00026EAD /* HomeViewFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewFlowDelegate.swift; sourceTree = "<group>"; };
+		33A86E3124EB51A400026EAD /* HomeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlow.swift; sourceTree = "<group>"; };
 		33F0852E24E2F58800332783 /* FlowControllerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowControllerMain.swift; sourceTree = "<group>"; };
 		33F0853124E2F5A800332783 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		33F0853324E2F5E100332783 /* HomeViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewType.swift; sourceTree = "<group>"; };
@@ -289,8 +303,20 @@
 				33A86E1A24E7407100026EAD /* PostListType.swift */,
 				33A86E1C24E740BE00026EAD /* PostListUIView.swift */,
 				33A86E1E24E745AD00026EAD /* PostListViewModelType.swift */,
+				33A86E2D24EB4CD200026EAD /* PostListDelegate.swift */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		33A86E2424EB477000026EAD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				33A86E2524EB477000026EAD /* OpenSans-Semibold.ttf */,
+				33A86E2624EB477000026EAD /* OpenSans-Light.ttf */,
+				33A86E2724EB477000026EAD /* OpenSans-Regular.ttf */,
+				33A86E2824EB477000026EAD /* helvetica-bold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		33F0852924E2163F00332783 /* Feature */ = {
@@ -358,6 +384,8 @@
 				33F0855524E332D400332783 /* View */,
 				33F0855624E332EC00332783 /* HomeViewControllerType.swift */,
 				33F0855824E3330200332783 /* HomeViewController.swift */,
+				33A86E2F24EB516E00026EAD /* HomeViewFlowDelegate.swift */,
+				33A86E3124EB51A400026EAD /* HomeFlow.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -389,6 +417,7 @@
 		33F0855224E3301A00332783 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				33A86E2424EB477000026EAD /* Fonts */,
 				33F0855324E3305700332783 /* Localizable.strings */,
 			);
 			path = Resources;
@@ -485,8 +514,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A86E2924EB477000026EAD /* OpenSans-Semibold.ttf in Resources */,
 				330EB87124E20B8500277210 /* LaunchScreen.storyboard in Resources */,
 				33F0855424E3305700332783 /* Localizable.strings in Resources */,
+				33A86E2C24EB477000026EAD /* helvetica-bold.otf in Resources */,
+				33A86E2A24EB477000026EAD /* OpenSans-Light.ttf in Resources */,
+				33A86E2B24EB477000026EAD /* OpenSans-Regular.ttf in Resources */,
 				330EB86E24E20B8500277210 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,7 +598,9 @@
 				33A86E1B24E7407100026EAD /* PostListType.swift in Sources */,
 				33A86E0024E4BF3700026EAD /* FactoryUseCaseType.swift in Sources */,
 				33F0853424E2F5E100332783 /* HomeViewType.swift in Sources */,
+				33A86E2E24EB4CD200026EAD /* PostListDelegate.swift in Sources */,
 				33F0855724E332EC00332783 /* HomeViewControllerType.swift in Sources */,
+				33A86E3224EB51A400026EAD /* HomeFlow.swift in Sources */,
 				33F0853B24E3000400332783 /* FlowControllerType.swift in Sources */,
 				33F0854C24E32E3C00332783 /* StringExtension.swift in Sources */,
 				33A86DE124E4A9DB00026EAD /* Environment.swift in Sources */,
@@ -573,6 +608,7 @@
 				33F0855924E3330200332783 /* HomeViewController.swift in Sources */,
 				33F0853224E2F5A800332783 /* HomeView.swift in Sources */,
 				33A86E0724E4C23200026EAD /* FactoryRedditProject.swift in Sources */,
+				33A86E3024EB516E00026EAD /* HomeViewFlowDelegate.swift in Sources */,
 				33F0854A24E32E3C00332783 /* UIFontExtension.swift in Sources */,
 				33A86E1F24E745AD00026EAD /* PostListViewModelType.swift in Sources */,
 				33A86DE224E4A9DB00026EAD /* EndpointTypeProtocol.swift in Sources */,

@@ -13,9 +13,9 @@ final class PostView: DefaultUIView, PostViewType {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-//        label.heightAnchor.constraint(equalToConstant: Metrics.Cell.height).isActive = true
         label.textColor = .topaz
-        //label.font = .textStyle
+        label.font = .textStyle
+        
         return label
     }()
     
@@ -34,12 +34,13 @@ final class PostView: DefaultUIView, PostViewType {
     }
     
     override func setupConstraints() {
-        stackData.bindFrameToSuperviewBounds()
-        //titleLabel.bindFrameToSuperviewBounds()
+        stackData.bindFrameToSuperviewBounds(constant: Metrics.Spacing.small)
+        
     }
     
     private func setTitle(with title: String) {
         titleLabel.text = title
+        titleLabel.sizeToFit()
     }
 }
 

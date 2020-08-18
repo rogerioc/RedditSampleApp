@@ -9,15 +9,20 @@
 import Foundation
 
 protocol PostListViewModelType: AnyObject {
+    var delegate: PostListDelegate? { get set }
     var updateList: (() -> Void)? { get set }
     var quantity: Int { get }
     subscript(index: Int) -> PostViewEntity? { get }
     func setList(with posts: [PostViewEntity])
     func viewDidLoad()
+    func select(index: Int)
     
 }
 
 final class PostListViewModel: PostListViewModelType {
+    
+    weak var delegate: PostListDelegate?
+    
     var updateList: (() -> Void)?
         
     var postList: [PostViewEntity]? {
@@ -28,7 +33,7 @@ final class PostListViewModel: PostListViewModelType {
             }
         }
     }
-    
+           
     func setList(with posts: [PostViewEntity]) {
         postList = posts
     }
@@ -41,6 +46,13 @@ final class PostListViewModel: PostListViewModelType {
     
     func viewDidLoad() {
         
+    }
+    
+    
+    func select(index: Int) {
+        guard let postList = postList, index > -1, index <= postList.count else { return }
+        
+        delegate?.selectedItem(item: postList[index])
     }
     
     public subscript(index: Int) -> PostViewEntity? {
