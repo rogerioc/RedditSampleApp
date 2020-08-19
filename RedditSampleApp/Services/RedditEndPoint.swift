@@ -11,11 +11,12 @@ import Alamofire
 
 enum RedditEndPoint: EndpointTypeProtocol {
     case list(posts: String)
+    case detail(detailPath: String)
     
     var method: HTTPMethod {
         
         switch self {
-        case .list:
+        case .list, .detail:
             return .get
         
         }
@@ -25,9 +26,9 @@ enum RedditEndPoint: EndpointTypeProtocol {
         switch self {
             case .list(let posts):
                 return "\(posts)"
+            case .detail(let detailPath):
+                return "\(detailPath)"
         }
     }
-    
-    
     
 }

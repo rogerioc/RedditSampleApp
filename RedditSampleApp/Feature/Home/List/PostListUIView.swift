@@ -31,11 +31,9 @@ final class PostListUIView: UITableView, PostListType {
         delegate = self
         viewModel?.updateList = { [weak self] in
             self?.reloadData()
-        }
-        
+        }        
         viewModel?.viewDidLoad()
 
-        
     }
 }
 

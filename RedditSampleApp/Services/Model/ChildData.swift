@@ -16,6 +16,7 @@ struct ChildData: Codable {
     let urlOverriddenByDest: String?
     let viewCount: String?
     let numComments: Int?
+    let permalink: String?
 
     enum CodingKeys: String, CodingKey {
         case approvedAtUTC = "approved_at_utc"
@@ -28,5 +29,6 @@ struct ChildData: Codable {
         case urlOverriddenByDest = "url_overridden_by_dest"
         case viewCount = "view_count"
         case numComments = "num_comments"
+        case permalink
     }
 }

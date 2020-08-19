@@ -11,6 +11,8 @@ import Alamofire
 
 protocol PostsRepositoryType: AnyObject {
     func fetchPosts(type: String, success: @escaping (Posts)-> (), failure: @escaping (CustomError)->())
+    
+    func getDetail(detailPath: String, success: @escaping (Posts)-> (), failure: @escaping (CustomError)->())
 }
 
 final class PostsRepository: PostsRepositoryType {
@@ -25,6 +27,12 @@ final class PostsRepository: PostsRepositoryType {
         let endPoint = Endpoint(enviroment: environment, endpointTypeProtocol: RedditEndPoint.list(posts: type))
         get(endPoint: endPoint, success: success, failure: failure)
 
+    }
+    
+    func getDetail(detailPath: String, success: @escaping (Posts) -> (), failure: @escaping (CustomError) -> ()) {
+         let endPoint = Endpoint(enviroment: environment, endpointTypeProtocol: RedditEndPoint.detail(detailPath: detailPath))
+            
+        get(endPoint: endPoint, success: success, failure: failure)
     }
     
     func get<T: Codable>(endPoint: Endpoint, success: @escaping (T) -> (),failure: @escaping (CustomError) -> ()) {

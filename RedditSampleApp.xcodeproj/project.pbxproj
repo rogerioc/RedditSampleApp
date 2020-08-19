@@ -319,9 +319,17 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		33A86E3324EC8D7200026EAD /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		33F0852924E2163F00332783 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				33A86E3324EC8D7200026EAD /* Detail */,
 				33F0853024E2F59200332783 /* Home */,
 			);
 			path = Feature;
