@@ -14,7 +14,7 @@
 		330EB87C24E20B8500277210 /* RedditSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330EB87B24E20B8500277210 /* RedditSampleAppTests.swift */; };
 		338B002924EDE9FB000D090B /* PostsRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B002824EDE9FB000D090B /* PostsRepositoryMock.swift */; };
 		338B002C24EDEA93000D090B /* MyCustomMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B002B24EDEA93000D090B /* MyCustomMock.swift */; };
-		338B002F24EDEC3C000D090B /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B002E24EDEC3C000D090B /* ApiTests.swift */; };
+		338B002F24EDEC3C000D090B /* UseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B002E24EDEC3C000D090B /* UseCaseTests.swift */; };
 		338DB7F87EDAEE056476A601 /* Pods_RedditSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326CFB68300ADF1398CB4902 /* Pods_RedditSampleApp.framework */; };
 		33A86DDE24E4A94D00026EAD /* TableViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86DDD24E4A94D00026EAD /* TableViewType.swift */; };
 		33A86DE124E4A9DB00026EAD /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86DDF24E4A9DB00026EAD /* Environment.swift */; };
@@ -51,6 +51,10 @@
 		33A86E2E24EB4CD200026EAD /* PostListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E2D24EB4CD200026EAD /* PostListDelegate.swift */; };
 		33A86E3024EB516E00026EAD /* HomeViewFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E2F24EB516E00026EAD /* HomeViewFlowDelegate.swift */; };
 		33A86E3224EB51A400026EAD /* HomeFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A86E3124EB51A400026EAD /* HomeFlow.swift */; };
+		33A8B4A124F06F34000D3824 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4A024F06F34000D3824 /* HomeViewControllerTests.swift */; };
+		33A8B4A424F070A2000D3824 /* HomeViewTypeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4A324F070A2000D3824 /* HomeViewTypeMock.swift */; };
+		33A8B4A624F072C7000D3824 /* HomeViewModelTypeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4A524F072C7000D3824 /* HomeViewModelTypeMock.swift */; };
+		33A8B4A824F0744F000D3824 /* HomeViewFlowDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4A724F0744F000D3824 /* HomeViewFlowDelegateMock.swift */; };
 		33F0852824E214CD00332783 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330EB88D24E2137300277210 /* Alamofire.framework */; };
 		33F0852F24E2F58800332783 /* FlowControllerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0852E24E2F58800332783 /* FlowControllerMain.swift */; };
 		33F0853224E2F5A800332783 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0853124E2F5A800332783 /* HomeView.swift */; };
@@ -104,7 +108,7 @@
 		330EB88D24E2137300277210 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = vendor/Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		338B002824EDE9FB000D090B /* PostsRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepositoryMock.swift; sourceTree = "<group>"; };
 		338B002B24EDEA93000D090B /* MyCustomMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomMock.swift; sourceTree = "<group>"; };
-		338B002E24EDEC3C000D090B /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
+		338B002E24EDEC3C000D090B /* UseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseTests.swift; sourceTree = "<group>"; };
 		33A86DDD24E4A94D00026EAD /* TableViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewType.swift; sourceTree = "<group>"; };
 		33A86DDF24E4A9DB00026EAD /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		33A86DE024E4A9DB00026EAD /* EndpointTypeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointTypeProtocol.swift; sourceTree = "<group>"; };
@@ -140,6 +144,10 @@
 		33A86E2D24EB4CD200026EAD /* PostListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListDelegate.swift; sourceTree = "<group>"; };
 		33A86E2F24EB516E00026EAD /* HomeViewFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewFlowDelegate.swift; sourceTree = "<group>"; };
 		33A86E3124EB51A400026EAD /* HomeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlow.swift; sourceTree = "<group>"; };
+		33A8B4A024F06F34000D3824 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		33A8B4A324F070A2000D3824 /* HomeViewTypeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTypeMock.swift; sourceTree = "<group>"; };
+		33A8B4A524F072C7000D3824 /* HomeViewModelTypeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTypeMock.swift; sourceTree = "<group>"; };
+		33A8B4A724F0744F000D3824 /* HomeViewFlowDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewFlowDelegateMock.swift; sourceTree = "<group>"; };
 		33F0852E24E2F58800332783 /* FlowControllerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowControllerMain.swift; sourceTree = "<group>"; };
 		33F0853124E2F5A800332783 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		33F0853324E2F5E100332783 /* HomeViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewType.swift; sourceTree = "<group>"; };
@@ -233,8 +241,9 @@
 		330EB87A24E20B8500277210 /* RedditSampleAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				33A8B49F24F06F14000D3824 /* ViewControllersTests */,
 				338B002A24EDEA81000D090B /* Common */,
-				338B002724EDE9C1000D090B /* Services */,
+				338B002724EDE9C1000D090B /* ServicesTests */,
 				330EB87B24E20B8500277210 /* RedditSampleAppTests.swift */,
 				330EB87D24E20B8500277210 /* Info.plist */,
 			);
@@ -260,13 +269,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		338B002724EDE9C1000D090B /* Services */ = {
+		338B002724EDE9C1000D090B /* ServicesTests */ = {
 			isa = PBXGroup;
 			children = (
 				338B002824EDE9FB000D090B /* PostsRepositoryMock.swift */,
-				338B002E24EDEC3C000D090B /* ApiTests.swift */,
+				338B002E24EDEC3C000D090B /* UseCaseTests.swift */,
 			);
-			path = Services;
+			path = ServicesTests;
 			sourceTree = "<group>";
 		};
 		338B002A24EDEA81000D090B /* Common */ = {
@@ -362,6 +371,25 @@
 			children = (
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		33A8B49F24F06F14000D3824 /* ViewControllersTests */ = {
+			isa = PBXGroup;
+			children = (
+				33A8B4A224F0708C000D3824 /* Mock */,
+				33A8B4A024F06F34000D3824 /* HomeViewControllerTests.swift */,
+			);
+			path = ViewControllersTests;
+			sourceTree = "<group>";
+		};
+		33A8B4A224F0708C000D3824 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				33A8B4A324F070A2000D3824 /* HomeViewTypeMock.swift */,
+				33A8B4A524F072C7000D3824 /* HomeViewModelTypeMock.swift */,
+				33A8B4A724F0744F000D3824 /* HomeViewFlowDelegateMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		33F0852924E2163F00332783 /* Feature */ = {
@@ -744,8 +772,12 @@
 			files = (
 				330EB87C24E20B8500277210 /* RedditSampleAppTests.swift in Sources */,
 				338B002924EDE9FB000D090B /* PostsRepositoryMock.swift in Sources */,
-				338B002F24EDEC3C000D090B /* ApiTests.swift in Sources */,
+				33A8B4A824F0744F000D3824 /* HomeViewFlowDelegateMock.swift in Sources */,
+				33A8B4A624F072C7000D3824 /* HomeViewModelTypeMock.swift in Sources */,
+				338B002F24EDEC3C000D090B /* UseCaseTests.swift in Sources */,
+				33A8B4A424F070A2000D3824 /* HomeViewTypeMock.swift in Sources */,
 				338B002C24EDEA93000D090B /* MyCustomMock.swift in Sources */,
+				33A8B4A124F06F34000D3824 /* HomeViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
