@@ -11,4 +11,5 @@ import Foundation
 protocol HomeViewType: ViewType {
     var selectedItem: ((PostViewEntity)->Void)? { get set}
     func setUpdateList(with postsViewEntity: [PostViewEntity])
+    func loading(is loading: Bool)
 }

@@ -30,6 +30,12 @@ final class HomeViewTypeMock: UIView, HomeViewType, Mock {
         callHandler.accept(nil, ofFunction: #function, atFile: #file, inLine: #line, withArgs: postsViewEntity)
     }
     
+    func loading(is loading: Bool) {
+        callHandler.accept(nil, ofFunction: #function, atFile: #file, inLine: #line, withArgs: loading)
+    }
+    
+
+    
     func instanceType() -> HomeViewTypeMock {
         return self
     }

@@ -11,7 +11,7 @@ import Mockit
 @testable import RedditSampleApp
 
 class HomeViewModelTests: XCTestCase {
-
+    
     var homeViewModel: HomeViewModelType!
     var useCaseType: PostsUseCaseTypeMock!
     
@@ -19,7 +19,7 @@ class HomeViewModelTests: XCTestCase {
         useCaseType = PostsUseCaseTypeMock(testCase: self)
         homeViewModel = HomeViewModel(postsUseCase: useCaseType)
     }
-   
+    
     func testViwDidiLoadCallApi() throws {
         homeViewModel.viewDidLoad()
         
@@ -35,16 +35,20 @@ class HomeViewModelTests: XCTestCase {
             (args[0] as! ([PostViewEntity]) -> (Void))(postView!)
         }
         
-        homeViewModel.updateView = { posts in
-            XCTAssertEqual(posts.count, 1)
+        homeViewModel.viewState = { state in
+            switch state {
+            case .hasData(let posts):
+                XCTAssertEqual(posts.count, 1)
+            default:
+                XCTAssert(false)
+            }
+            
         }
         
-        homeViewModel.errorData = { 
-            XCTAssert(false)
-        }
+        
         
         homeViewModel.viewDidLoad()
-                
+        
     }
     
     func testViwDidiLoadCallUseCaseError() throws {
@@ -53,17 +57,19 @@ class HomeViewModelTests: XCTestCase {
             
             (args[1] as! (CustomError) -> (Void))(CustomError.convertError)
         }
-        
-        homeViewModel.updateView = { posts in
-            XCTAssert(false)
+        homeViewModel.viewState = { state in
+            switch state {
+            case .error:
+                XCTAssert(true)
+            default:
+                XCTAssert(false)
+            }
+            
         }
         
-        homeViewModel.errorData = {
-            XCTAssert(true)
-        }
         
         homeViewModel.viewDidLoad()
-                
+        
     }
-   
+    
 }

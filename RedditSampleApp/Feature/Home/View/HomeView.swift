@@ -23,6 +23,12 @@ final class HomeView: DefaultUIView, HomeViewType {
         return nil
     }
     
+    private lazy var loadingIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        return indicator
+    }()
+    
     private lazy var list: PostListUIView = {
         let list = PostListUIView()
         list.translatesAutoresizingMaskIntoConstraints = false
@@ -32,6 +38,8 @@ final class HomeView: DefaultUIView, HomeViewType {
     override func buildHierarch() {
         backgroundColor = .white
         addSubview(list)
+        addSubview(loadingIndicator)
+        
         guard let postListViewModelType = postListViewModelType else { return }
         list.setViewModel(with: postListViewModelType)
         self.postListViewModelType?.delegate = self
@@ -42,8 +50,14 @@ final class HomeView: DefaultUIView, HomeViewType {
     
     override func setupConstraints() {
         list.bindFrameToSuperviewBounds()
+        loadingIndicator.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        loadingIndicator.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
     }
     
+    private func setLoading(with loading: Bool) {
+        loadingIndicator.isHidden = !loading
+        list.isHidden = loading
+    }
 }
 
 extension HomeView {
@@ -58,5 +72,7 @@ extension HomeView: PostListDelegate {
         selectedItem?(item)
     }
     
-    
+    func loading(is loading: Bool) {
+        setLoading(with: loading)
+    }
 }

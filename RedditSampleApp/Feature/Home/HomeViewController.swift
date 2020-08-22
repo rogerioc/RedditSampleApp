@@ -34,8 +34,16 @@ final class HomeViewController: UIViewController, HomeViewControllerType {
         super.viewDidLoad()
         setup()
         viewmodel.viewDidLoad()
-        viewmodel.updateView = { [weak self] posts in
-            self?.contentView.setUpdateList(with: posts)
+        viewmodel.viewState = { [weak self] state in
+            switch state {
+            case .isLoading:
+                self?.contentView.loading(is: true)
+            case .hasData(let posts):
+                self?.contentView.loading(is: false)
+                self?.contentView.setUpdateList(with: posts)
+            case .error: break
+                self?.contentView.loading(is: false)
+            }
         }
         
         self.contentView.selectedItem = { [weak self] postViewEntity in

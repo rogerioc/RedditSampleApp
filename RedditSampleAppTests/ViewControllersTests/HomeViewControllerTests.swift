@@ -28,7 +28,7 @@ class HomeViewControllerTests: XCTestCase {
     }
     
     func testIfUpdadeViewIsNil() throws {
-        XCTAssertNil(viewmodel.updateView)
+        XCTAssertNil(viewmodel.viewState)
     }
     
     func testIfselectedItemIsNil() throws {
@@ -43,7 +43,7 @@ class HomeViewControllerTests: XCTestCase {
     
     func testIfUpdadeViewIsSet() throws {
         homeViewController.viewDidLoad()
-        XCTAssertNotNil(viewmodel.updateView)
+        XCTAssertNotNil(viewmodel.viewState)
     }
     
     func testIfselectedItemIsSet() throws {

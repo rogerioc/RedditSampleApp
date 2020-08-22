@@ -13,10 +13,8 @@ import XCTest
 
 
 final class HomeViewModelTypeMock: HomeViewModelType, Mock {
-    var errorData: (() -> Void)?
-    
+    var viewState: ((HomeViewState) -> Void)?        
     let callHandler: CallHandler
-    var updateView: (([PostViewEntity]) -> Void)?
 
     init(testCase: XCTestCase) {
         self.callHandler = CallHandlerImpl(withTestCase: testCase)

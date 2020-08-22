@@ -9,17 +9,26 @@
 import Foundation
 
 protocol HomeViewModelType: AnyObject {
-    var updateView: (([PostViewEntity]) -> Void)? { get set }
-    var errorData: (() -> Void)? { get set }
+    var viewState: ((HomeViewState) -> Void)? { get set }
     func selectedItem(item: PostViewEntity)
     func viewDidLoad()
 }
 
 final class HomeViewModel: HomeViewModelType {
+    var viewState: ((HomeViewState) -> Void)?
+    
     var errorData: (() -> Void)?
     var updateView: (([PostViewEntity]) -> Void)?
-        
+    
     let postsUseCase: PostsUseCaseType
+    private var homeState: HomeViewState = .isLoading{
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                guard let _self = self else { return }
+                _self.viewState?(_self.homeState)
+            }
+        }
+    }
     
     init(postsUseCase: PostsUseCaseType) {
         self.postsUseCase = postsUseCase
@@ -30,13 +39,13 @@ final class HomeViewModel: HomeViewModelType {
     }
     
     func viewDidLoad() {
-        postsUseCase.execute(success: { [weak self] posts in            
-            self?.updateView?(posts)
-            
-        }, failure: { [weak self]  error in
-            self?.errorData?()
+        homeState = .isLoading
+        postsUseCase.execute(success: { [weak self] posts in
+            self?.homeState = .hasData(posts: posts)
+            }, failure: { [weak self]  error in
+                self?.homeState = .error
         })
     }
-        
+    
     
 }

@@ -59,6 +59,7 @@
 		33A8B4AD24F08E46000D3824 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4AC24F08E46000D3824 /* HomeViewModelTests.swift */; };
 		33A8B4B024F08EDA000D3824 /* PostsUseCaseTypeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4AF24F08EDA000D3824 /* PostsUseCaseTypeMock.swift */; };
 		33A8B4B224F093A9000D3824 /* FactoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4B124F093A9000D3824 /* FactoryData.swift */; };
+		33A8B4B424F0BA85000D3824 /* HomeViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4B324F0BA85000D3824 /* HomeViewState.swift */; };
 		33F0852824E214CD00332783 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330EB88D24E2137300277210 /* Alamofire.framework */; };
 		33F0852F24E2F58800332783 /* FlowControllerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0852E24E2F58800332783 /* FlowControllerMain.swift */; };
 		33F0853224E2F5A800332783 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0853124E2F5A800332783 /* HomeView.swift */; };
@@ -156,6 +157,7 @@
 		33A8B4AC24F08E46000D3824 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		33A8B4AF24F08EDA000D3824 /* PostsUseCaseTypeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsUseCaseTypeMock.swift; sourceTree = "<group>"; };
 		33A8B4B124F093A9000D3824 /* FactoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryData.swift; sourceTree = "<group>"; };
+		33A8B4B324F0BA85000D3824 /* HomeViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewState.swift; sourceTree = "<group>"; };
 		33F0852E24E2F58800332783 /* FlowControllerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowControllerMain.swift; sourceTree = "<group>"; };
 		33F0853124E2F5A800332783 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		33F0853324E2F5E100332783 /* HomeViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewType.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				33A86DFB24E4B66400026EAD /* HomeViewModel.swift */,
+				33A8B4B324F0BA85000D3824 /* HomeViewState.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -786,6 +789,7 @@
 				33F0853224E2F5A800332783 /* HomeView.swift in Sources */,
 				33A86E0724E4C23200026EAD /* FactoryRedditProject.swift in Sources */,
 				33A86E3024EB516E00026EAD /* HomeViewFlowDelegate.swift in Sources */,
+				33A8B4B424F0BA85000D3824 /* HomeViewState.swift in Sources */,
 				33F0854A24E32E3C00332783 /* UIFontExtension.swift in Sources */,
 				33A86E1F24E745AD00026EAD /* PostListViewModelType.swift in Sources */,
 				33A86DE224E4A9DB00026EAD /* EndpointTypeProtocol.swift in Sources */,
