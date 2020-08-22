@@ -1,5 +1,5 @@
 //
-//  DetailFlow.swift
+//  DetailViewModelType.swift
 //  RedditSampleApp
 //
 //  Created by rogerio on 22/08/20.
@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol DetailViewModelType: AnyObject {
+    var title: ((String) -> Void)? { get set }
+    func viewDidLoad()
+}

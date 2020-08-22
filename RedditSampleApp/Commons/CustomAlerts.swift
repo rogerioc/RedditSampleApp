@@ -11,10 +11,10 @@ import UIKit
 
 final public class CustomAlerts {
     
-    static func alertOk(uiView: UIViewController,title: String, message: String, okSellected: @escaping () ->Void) {
+    static func alertOk(uiView: UIViewController,title: String, message: String, okSellected: (() ->Void)?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK".localizable, style: .default, handler: { _ in
-            okSellected()
+            okSellected?()
         }))
         uiView.present(alert, animated: true, completion: nil)
     }

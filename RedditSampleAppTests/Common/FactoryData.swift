@@ -19,14 +19,14 @@ final class FactoryData {
     }
     
     static func postsData() -> PostsData {
-        return PostsData(modhash: "modhasj", dist: 0, children: FactoryData.childs(), after: "afrer", before: "before")
+        return PostsData(dist: 0, children: FactoryData.childs(), after: "afrer", before: "before")
     }
     static func childs() -> [Child] {
         [FactoryData.child()]
     }
     
     static func child() -> Child {
-        Child(kind: "kind", data: FactoryData.childData())
+        Child(data: FactoryData.childData())
     }
     static func childData() -> ChildData {
         ChildData(approvedAtUTC: "", subreddit: "", selftext: "", authorFullname: "", title:"", subredditNamePrefixed: "", name: "", score: 0, created: 0, urlOverriddenByDest: "", viewCount: "", numComments: 0, permalink: "")

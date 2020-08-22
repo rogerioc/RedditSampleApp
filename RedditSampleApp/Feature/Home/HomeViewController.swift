@@ -33,6 +33,7 @@ final class HomeViewController: UIViewController, HomeViewControllerType {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        title = Texts.home.title
         viewmodel.viewDidLoad()
         viewmodel.viewState = { [weak self] state in
             switch state {
@@ -41,8 +42,9 @@ final class HomeViewController: UIViewController, HomeViewControllerType {
             case .hasData(let posts):
                 self?.contentView.loading(is: false)
                 self?.contentView.setUpdateList(with: posts)
-            case .error: break
+            case .error(let title, let message):
                 self?.contentView.loading(is: false)
+                self?.alertOK(title: title, message: message, okSellected: nil)
             }
         }
         

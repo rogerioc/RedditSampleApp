@@ -10,4 +10,5 @@ import Foundation
 
 struct PostViewEntity: Equatable {
     let title: String
+    let url: String
 }

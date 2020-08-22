@@ -10,11 +10,11 @@ import Foundation
 
 extension Child {
     func toPostViewEntity() -> PostViewEntity {
-        PostViewEntity(title: self.data?.title ?? "")
+        PostViewEntity(title: self.data?.title ?? "", url: self.data?.permalink ?? "")
     }
 }
-extension Array where Element == Child {
-    
+
+extension Array where Element == Child {    
     func toPostsViewEntity() -> [PostViewEntity] {
         return self.compactMap { child -> PostViewEntity in
             child.toPostViewEntity()

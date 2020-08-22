@@ -8,9 +8,13 @@
 
 import Foundation
 
-final class Texts {
+enum Texts {
     static var detailAbout: String {
         "detail.about".localizable
+    }
+    
+    enum home {
+        static let title: String = "home.title".localizable
     }
     
 }

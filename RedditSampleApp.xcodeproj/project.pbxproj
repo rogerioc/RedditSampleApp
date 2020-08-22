@@ -64,8 +64,13 @@
 		33A8B4B924F0C136000D3824 /* DetailViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4B824F0C136000D3824 /* DetailViewType.swift */; };
 		33A8B4BB24F0C16B000D3824 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4BA24F0C16B000D3824 /* DetailView.swift */; };
 		33A8B4BD24F0C237000D3824 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4BC24F0C237000D3824 /* DetailViewController.swift */; };
-		33A8B4C024F0C4D8000D3824 /* DetailFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4BF24F0C4D8000D3824 /* DetailFlowController.swift */; };
+		33A8B4C024F0C4D8000D3824 /* DetailViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4BF24F0C4D8000D3824 /* DetailViewControllerState.swift */; };
 		33A8B4C224F0C52A000D3824 /* FlowControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4C124F0C52A000D3824 /* FlowControllerDetail.swift */; };
+		33A8B4C424F1AE82000D3824 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4C324F1AE82000D3824 /* Strings.swift */; };
+		33A8B4C624F1B4F7000D3824 /* TypeTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4C524F1B4F7000D3824 /* TypeTopic.swift */; };
+		33A8B4C924F1B6A2000D3824 /* ViewEntitiesConvertsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4C824F1B6A2000D3824 /* ViewEntitiesConvertsTests.swift */; };
+		33A8B4CC24F1B9C6000D3824 /* DetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4CB24F1B9C6000D3824 /* DetailViewModelType.swift */; };
+		33A8B4CE24F1B9FA000D3824 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4CD24F1B9FA000D3824 /* DetailViewModel.swift */; };
 		33F0852824E214CD00332783 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330EB88D24E2137300277210 /* Alamofire.framework */; };
 		33F0852F24E2F58800332783 /* FlowControllerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0852E24E2F58800332783 /* FlowControllerMain.swift */; };
 		33F0853224E2F5A800332783 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0853124E2F5A800332783 /* HomeView.swift */; };
@@ -168,8 +173,13 @@
 		33A8B4B824F0C136000D3824 /* DetailViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewType.swift; sourceTree = "<group>"; };
 		33A8B4BA24F0C16B000D3824 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		33A8B4BC24F0C237000D3824 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		33A8B4BF24F0C4D8000D3824 /* DetailFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFlowController.swift; sourceTree = "<group>"; };
+		33A8B4BF24F0C4D8000D3824 /* DetailViewControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerState.swift; sourceTree = "<group>"; };
 		33A8B4C124F0C52A000D3824 /* FlowControllerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowControllerDetail.swift; sourceTree = "<group>"; };
+		33A8B4C324F1AE82000D3824 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		33A8B4C524F1B4F7000D3824 /* TypeTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTopic.swift; sourceTree = "<group>"; };
+		33A8B4C824F1B6A2000D3824 /* ViewEntitiesConvertsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEntitiesConvertsTests.swift; sourceTree = "<group>"; };
+		33A8B4CB24F1B9C6000D3824 /* DetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelType.swift; sourceTree = "<group>"; };
+		33A8B4CD24F1B9FA000D3824 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		33F0852E24E2F58800332783 /* FlowControllerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowControllerMain.swift; sourceTree = "<group>"; };
 		33F0853124E2F5A800332783 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		33F0853324E2F5E100332783 /* HomeViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewType.swift; sourceTree = "<group>"; };
@@ -253,7 +263,6 @@
 				330EB88724E20FA000277210 /* Config */,
 				330EB86424E20B8100277210 /* AppDelegate.swift */,
 				330EB86824E20B8100277210 /* ViewController.swift */,
-				330EB86D24E20B8500277210 /* Assets.xcassets */,
 				330EB86F24E20B8500277210 /* LaunchScreen.storyboard */,
 				330EB87224E20B8500277210 /* Info.plist */,
 			);
@@ -263,6 +272,7 @@
 		330EB87A24E20B8500277210 /* RedditSampleAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				33A8B4C724F1B682000D3824 /* ViewEntityTests */,
 				33A8B4AB24F08E23000D3824 /* ViewModelTests */,
 				33A8B49F24F06F14000D3824 /* ViewControllersTests */,
 				338B002A24EDEA81000D090B /* Common */,
@@ -395,10 +405,11 @@
 		33A86E3324EC8D7200026EAD /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				33A8B4CA24F1B9B3000D3824 /* ViewModel */,
 				33A8B4B524F0C0FB000D3824 /* View */,
 				33A8B4B624F0C111000D3824 /* DetailViewControllerType.swift */,
 				33A8B4BC24F0C237000D3824 /* DetailViewController.swift */,
-				33A8B4BF24F0C4D8000D3824 /* DetailFlowController.swift */,
+				33A8B4BF24F0C4D8000D3824 /* DetailViewControllerState.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -448,6 +459,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		33A8B4C724F1B682000D3824 /* ViewEntityTests */ = {
+			isa = PBXGroup;
+			children = (
+				33A8B4C824F1B6A2000D3824 /* ViewEntitiesConvertsTests.swift */,
+			);
+			path = ViewEntityTests;
+			sourceTree = "<group>";
+		};
+		33A8B4CA24F1B9B3000D3824 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				33A8B4CB24F1B9C6000D3824 /* DetailViewModelType.swift */,
+				33A8B4CD24F1B9FA000D3824 /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		33F0852924E2163F00332783 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +493,7 @@
 				33A86DE624E4AAF900026EAD /* RedditEndPoint.swift */,
 				33A86DF124E4B22C00026EAD /* PostsRepository.swift */,
 				33A86DF324E4B31E00026EAD /* CustomError.swift */,
+				33A8B4C524F1B4F7000D3824 /* TypeTopic.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -548,8 +577,10 @@
 		33F0855224E3301A00332783 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				330EB86D24E20B8500277210 /* Assets.xcassets */,
 				33A86E2424EB477000026EAD /* Fonts */,
 				33F0855324E3305700332783 /* Localizable.strings */,
+				33A8B4C324F1AE82000D3824 /* Strings.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -795,6 +826,7 @@
 				33A86DDE24E4A94D00026EAD /* TableViewType.swift in Sources */,
 				33F0853E24E3009000332783 /* FactoryViewControllerType.swift in Sources */,
 				33A86DFE24E4BE9200026EAD /* FactoryViewModelType.swift in Sources */,
+				33A8B4C624F1B4F7000D3824 /* TypeTopic.swift in Sources */,
 				33A86DEC24E4AEFC00026EAD /* PostsData.swift in Sources */,
 				33A86DF424E4B31E00026EAD /* CustomError.swift in Sources */,
 				33F0852F24E2F58800332783 /* FlowControllerMain.swift in Sources */,
@@ -808,15 +840,18 @@
 				33A86E0A24E7343E00026EAD /* PostCell.swift in Sources */,
 				33A86E1B24E7407100026EAD /* PostListType.swift in Sources */,
 				33A86E0024E4BF3700026EAD /* FactoryUseCaseType.swift in Sources */,
+				33A8B4C424F1AE82000D3824 /* Strings.swift in Sources */,
 				33F0853424E2F5E100332783 /* HomeViewType.swift in Sources */,
-				33A8B4C024F0C4D8000D3824 /* DetailFlowController.swift in Sources */,
+				33A8B4C024F0C4D8000D3824 /* DetailViewControllerState.swift in Sources */,
 				33A86E2E24EB4CD200026EAD /* PostListDelegate.swift in Sources */,
 				33F0855724E332EC00332783 /* HomeViewControllerType.swift in Sources */,
+				33A8B4CE24F1B9FA000D3824 /* DetailViewModel.swift in Sources */,
 				33A86E3224EB51A400026EAD /* HomeFlow.swift in Sources */,
 				33F0853B24E3000400332783 /* FlowControllerType.swift in Sources */,
 				33F0854C24E32E3C00332783 /* StringExtension.swift in Sources */,
 				33A86DE124E4A9DB00026EAD /* Environment.swift in Sources */,
 				33F0855124E32E3C00332783 /* ReusableView.swift in Sources */,
+				33A8B4CC24F1B9C6000D3824 /* DetailViewModelType.swift in Sources */,
 				33F0855924E3330200332783 /* HomeViewController.swift in Sources */,
 				33F0853224E2F5A800332783 /* HomeView.swift in Sources */,
 				33A86E0724E4C23200026EAD /* FactoryRedditProject.swift in Sources */,
@@ -842,6 +877,7 @@
 				33A8B4AD24F08E46000D3824 /* HomeViewModelTests.swift in Sources */,
 				33A8B4B224F093A9000D3824 /* FactoryData.swift in Sources */,
 				33A8B4A424F070A2000D3824 /* HomeViewTypeMock.swift in Sources */,
+				33A8B4C924F1B6A2000D3824 /* ViewEntitiesConvertsTests.swift in Sources */,
 				338B002C24EDEA93000D090B /* MyCustomMock.swift in Sources */,
 				33A8B4B024F08EDA000D3824 /* PostsUseCaseTypeMock.swift in Sources */,
 				33A8B4A124F06F34000D3824 /* HomeViewControllerTests.swift in Sources */,

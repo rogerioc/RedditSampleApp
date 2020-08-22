@@ -43,7 +43,7 @@ final class HomeViewModel: HomeViewModelType {
         postsUseCase.execute(success: { [weak self] posts in
             self?.homeState = .hasData(posts: posts)
             }, failure: { [weak self]  error in
-                self?.homeState = .error
+                self?.homeState = .error(title: "", message: "")
         })
     }
     

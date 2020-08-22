@@ -17,9 +17,12 @@ final class FlowControllerDetail: FlowControllerType {
     
     var factory: FactoryViewControllerType
     
-    init(navigationController: UINavigationController, factory: FactoryViewControllerType) {
+    var postViewEntity:PostViewEntity
+    
+    init(postViewEntity: PostViewEntity, navigationController: UINavigationController, factory: FactoryViewControllerType) {
         self.navigationController = navigationController
         self.factory = factory
+        self.postViewEntity = postViewEntity
     }
     
     func start() {
@@ -27,7 +30,7 @@ final class FlowControllerDetail: FlowControllerType {
     }
     
     private func startViewDetail() {
-        let viewController = factory.makeDetailController()
+        let viewController = factory.makeDetailController(postViewEntity: postViewEntity)
         push(viewController: viewController)
     }
     

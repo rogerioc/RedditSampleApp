@@ -9,8 +9,9 @@
 import Foundation
 
 protocol FactoryViewModelType: AnyObject {
-    func makeHomeViewModel() -> HomeViewModelType
+    func makeHomeViewModel(topic: TypeTopic) -> HomeViewModelType
     func makeViewPostListViewModel() -> PostListViewModelType
+    func makeDetailViewModel(postViewEntity: PostViewEntity) -> DetailViewModelType
 }
 
 final class FactoryViewModel: FactoryViewModelType {
@@ -20,11 +21,15 @@ final class FactoryViewModel: FactoryViewModelType {
         self.factoryUseCaseType = factoryUseCaseType
     }
     
-    func makeHomeViewModel() -> HomeViewModelType {
-        return HomeViewModel(postsUseCase: factoryUseCaseType.makePostsUseCase())
+    func makeHomeViewModel(topic: TypeTopic) -> HomeViewModelType {
+        return HomeViewModel(postsUseCase: factoryUseCaseType.makePostsUseCase(topic: topic))
     }
     
     func makeViewPostListViewModel() -> PostListViewModelType {
         PostListViewModel()
+    }
+    
+    func makeDetailViewModel(postViewEntity: PostViewEntity) -> DetailViewModelType {
+        DetailViewModel(postViewEntity: postViewEntity)
     }
 }

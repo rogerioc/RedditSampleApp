@@ -17,7 +17,7 @@ class UseCaseTests: XCTestCase {
     
     override func setUp() {
         postRepository = PostsRepositoryMock(testCase: self)
-        postsUseCase = PostsUseCase(repository: postRepository!)
+        postsUseCase = PostsUseCase(repository: postRepository!, topic: .programming)
     }
     
     func testCallFetchPosts() throws {
@@ -68,6 +68,12 @@ class UseCaseTests: XCTestCase {
         
     }
     
-    
+    func testTopicTypeJson() {
+        let topic = TypeTopic.programming
+        let jsonTopic = topic.jsonName
+        
+        XCTAssertEqual(jsonTopic, "programming.json")
+        
+    }
     
 }

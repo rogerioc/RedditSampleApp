@@ -25,6 +25,7 @@ final class DetailView: DefaultUIView, DetailViewType {
     }
     
     override func buildHierarch() {
+        backgroundColor = .white
         addSubview(loadingIndicator)
     }
     

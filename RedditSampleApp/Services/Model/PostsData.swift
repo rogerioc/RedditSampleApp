@@ -10,7 +10,6 @@ import Foundation
 
 // MARK: - PostsData
 struct PostsData: Codable {
-    let modhash: String?
     let dist: Int?
     let children: [Child]?
     let after: String?

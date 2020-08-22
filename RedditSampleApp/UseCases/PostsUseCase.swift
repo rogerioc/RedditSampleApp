@@ -11,13 +11,16 @@ import Foundation
 final class PostsUseCase: PostsUseCaseType {
         
     let repository: PostsRepositoryType
+    let topic: TypeTopic
     
-    init(repository: PostsRepositoryType) {
+    init(repository: PostsRepositoryType, topic: TypeTopic) {
         self.repository = repository
+        self.topic = topic
+
     }
     
     func execute(success: @escaping ([PostViewEntity]) -> (), failure: @escaping (CustomError) -> ()) {
-        repository.fetchPosts(type: "programming.json", success: { posts in
+        repository.fetchPosts(type: topic.jsonName, success: { posts in
             let data = posts.data?.children?.toPostsViewEntity()
             guard let _data = data else {
                 failure(CustomError.convertError)

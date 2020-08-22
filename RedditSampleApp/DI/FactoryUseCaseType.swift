@@ -9,7 +9,7 @@
 import Foundation
 
 protocol FactoryUseCaseType: AnyObject {
-    func makePostsUseCase() -> PostsUseCaseType
+    func makePostsUseCase(topic: TypeTopic) -> PostsUseCaseType
 }
 
 final class FactoryUseCase: FactoryUseCaseType {
@@ -19,7 +19,7 @@ final class FactoryUseCase: FactoryUseCaseType {
         self.factoryRepositoriesType = factoryRepositoriesType
     }
     
-    func makePostsUseCase() -> PostsUseCaseType {
-        return PostsUseCase(repository: factoryRepositoriesType.makePostsRepository())
+    func makePostsUseCase(topic: TypeTopic) -> PostsUseCaseType {
+        return PostsUseCase(repository: factoryRepositoriesType.makePostsRepository(), topic: topic)
     }
 }

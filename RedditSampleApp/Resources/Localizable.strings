@@ -6,8 +6,10 @@
   Copyright © 2020 rogerio. All rights reserved.
 */
 
-"home.title" = "Home";
 "detail.about" = "Sobre";
 "button.ok" = "Ok";
+"button.tryagain" = "Tentar Novamente";
+"button.cancel" = "Cancelar";
 "alert.title.alert" = "Alerta";
 "alert.desciption.networkerro" = "Ocorreu um erro, por favor tente mais tarde";
+"home.title" = "Home";

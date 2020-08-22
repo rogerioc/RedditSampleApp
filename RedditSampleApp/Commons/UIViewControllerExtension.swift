@@ -11,7 +11,7 @@ import UIKit
 
 extension UIViewController {
     
-    public func alertOK(title: String, message: String, okSellected: @escaping () -> Void) {
+    public func alertOK(title: String, message: String, okSellected: ( () -> Void)?) {
         CustomAlerts.alertOk(uiView: self, title: title, message: message, okSellected: okSellected)
     }
 }

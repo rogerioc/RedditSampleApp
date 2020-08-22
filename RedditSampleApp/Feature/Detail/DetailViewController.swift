@@ -10,9 +10,11 @@ import UIKit
 
 final class DetailViewController: UIViewController, DetailViewControllerType {
     var contentView: DetailViewType
+    let viewModel: DetailViewModelType
     
-    init(contentView: DetailViewType) {
+    init(contentView: DetailViewType, viewModel: DetailViewModelType) {
         self.contentView = contentView
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -21,8 +23,12 @@ final class DetailViewController: UIViewController, DetailViewControllerType {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
         setup()
+        viewModel.title = { [weak self] title in
+            self?.title = title
+        }
+        viewModel.viewDidLoad()
     }
     
     private func setup() {
