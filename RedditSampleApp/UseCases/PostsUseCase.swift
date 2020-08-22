@@ -16,8 +16,15 @@ final class PostsUseCase: PostsUseCaseType {
         self.repository = repository
     }
     
-    func execute(success: @escaping (Posts) -> (), failure: @escaping (CustomError) -> ()) {
-        repository.fetchPosts(type: "programming.json", success: success, failure: failure)
+    func execute(success: @escaping ([PostViewEntity]) -> (), failure: @escaping (CustomError) -> ()) {
+        repository.fetchPosts(type: "programming.json", success: { posts in
+            let data = posts.data?.children?.toPostsViewEntity()
+            guard let _data = data else {
+                failure(CustomError.convertError)
+                return
+            }
+            success(_data)
+        }, failure: failure)
     }
     
 }

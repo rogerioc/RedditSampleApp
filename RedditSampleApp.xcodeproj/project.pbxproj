@@ -55,6 +55,10 @@
 		33A8B4A424F070A2000D3824 /* HomeViewTypeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4A324F070A2000D3824 /* HomeViewTypeMock.swift */; };
 		33A8B4A624F072C7000D3824 /* HomeViewModelTypeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4A524F072C7000D3824 /* HomeViewModelTypeMock.swift */; };
 		33A8B4A824F0744F000D3824 /* HomeViewFlowDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4A724F0744F000D3824 /* HomeViewFlowDelegateMock.swift */; };
+		33A8B4AA24F07E7D000D3824 /* AnyValue+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4A924F07E7D000D3824 /* AnyValue+Ext.swift */; };
+		33A8B4AD24F08E46000D3824 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4AC24F08E46000D3824 /* HomeViewModelTests.swift */; };
+		33A8B4B024F08EDA000D3824 /* PostsUseCaseTypeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4AF24F08EDA000D3824 /* PostsUseCaseTypeMock.swift */; };
+		33A8B4B224F093A9000D3824 /* FactoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A8B4B124F093A9000D3824 /* FactoryData.swift */; };
 		33F0852824E214CD00332783 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330EB88D24E2137300277210 /* Alamofire.framework */; };
 		33F0852F24E2F58800332783 /* FlowControllerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0852E24E2F58800332783 /* FlowControllerMain.swift */; };
 		33F0853224E2F5A800332783 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0853124E2F5A800332783 /* HomeView.swift */; };
@@ -148,6 +152,10 @@
 		33A8B4A324F070A2000D3824 /* HomeViewTypeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTypeMock.swift; sourceTree = "<group>"; };
 		33A8B4A524F072C7000D3824 /* HomeViewModelTypeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTypeMock.swift; sourceTree = "<group>"; };
 		33A8B4A724F0744F000D3824 /* HomeViewFlowDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewFlowDelegateMock.swift; sourceTree = "<group>"; };
+		33A8B4A924F07E7D000D3824 /* AnyValue+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyValue+Ext.swift"; sourceTree = "<group>"; };
+		33A8B4AC24F08E46000D3824 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		33A8B4AF24F08EDA000D3824 /* PostsUseCaseTypeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsUseCaseTypeMock.swift; sourceTree = "<group>"; };
+		33A8B4B124F093A9000D3824 /* FactoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryData.swift; sourceTree = "<group>"; };
 		33F0852E24E2F58800332783 /* FlowControllerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowControllerMain.swift; sourceTree = "<group>"; };
 		33F0853124E2F5A800332783 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		33F0853324E2F5E100332783 /* HomeViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewType.swift; sourceTree = "<group>"; };
@@ -241,6 +249,7 @@
 		330EB87A24E20B8500277210 /* RedditSampleAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				33A8B4AB24F08E23000D3824 /* ViewModelTests */,
 				33A8B49F24F06F14000D3824 /* ViewControllersTests */,
 				338B002A24EDEA81000D090B /* Common */,
 				338B002724EDE9C1000D090B /* ServicesTests */,
@@ -282,6 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				338B002B24EDEA93000D090B /* MyCustomMock.swift */,
+				33A8B4A924F07E7D000D3824 /* AnyValue+Ext.swift */,
+				33A8B4B124F093A9000D3824 /* FactoryData.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -388,6 +399,23 @@
 				33A8B4A324F070A2000D3824 /* HomeViewTypeMock.swift */,
 				33A8B4A524F072C7000D3824 /* HomeViewModelTypeMock.swift */,
 				33A8B4A724F0744F000D3824 /* HomeViewFlowDelegateMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		33A8B4AB24F08E23000D3824 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				33A8B4AE24F08EC7000D3824 /* Mock */,
+				33A8B4AC24F08E46000D3824 /* HomeViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		33A8B4AE24F08EC7000D3824 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				33A8B4AF24F08EDA000D3824 /* PostsUseCaseTypeMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -775,9 +803,13 @@
 				33A8B4A824F0744F000D3824 /* HomeViewFlowDelegateMock.swift in Sources */,
 				33A8B4A624F072C7000D3824 /* HomeViewModelTypeMock.swift in Sources */,
 				338B002F24EDEC3C000D090B /* UseCaseTests.swift in Sources */,
+				33A8B4AD24F08E46000D3824 /* HomeViewModelTests.swift in Sources */,
+				33A8B4B224F093A9000D3824 /* FactoryData.swift in Sources */,
 				33A8B4A424F070A2000D3824 /* HomeViewTypeMock.swift in Sources */,
 				338B002C24EDEA93000D090B /* MyCustomMock.swift in Sources */,
+				33A8B4B024F08EDA000D3824 /* PostsUseCaseTypeMock.swift in Sources */,
 				33A8B4A124F06F34000D3824 /* HomeViewControllerTests.swift in Sources */,
+				33A8B4AA24F07E7D000D3824 /* AnyValue+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

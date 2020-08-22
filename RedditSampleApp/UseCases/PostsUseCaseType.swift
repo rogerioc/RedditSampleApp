@@ -9,7 +9,7 @@
 import Foundation
 
 protocol PostsUseCaseType: AnyObject {
-    func execute(success: @escaping (Posts)-> (), failure: @escaping (CustomError)->())
+    func execute(success: @escaping ([PostViewEntity])-> (), failure: @escaping (CustomError)->())
     
 }
 

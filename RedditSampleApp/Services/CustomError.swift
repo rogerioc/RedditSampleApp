@@ -11,4 +11,5 @@ import Foundation
 enum CustomError {
     case network
     case json
+    case convertError
 }

@@ -13,6 +13,8 @@ import XCTest
 
 
 final class HomeViewModelTypeMock: HomeViewModelType, Mock {
+    var errorData: (() -> Void)?
+    
     let callHandler: CallHandler
     var updateView: (([PostViewEntity]) -> Void)?
 

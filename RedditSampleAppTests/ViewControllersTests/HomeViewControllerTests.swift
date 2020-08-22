@@ -50,5 +50,5 @@ class HomeViewControllerTests: XCTestCase {
         homeViewController.viewDidLoad()
         XCTAssertNotNil(homeViewTest.selectedItem)
     }
-    
+        
 }

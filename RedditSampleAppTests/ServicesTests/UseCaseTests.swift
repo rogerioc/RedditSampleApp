@@ -22,12 +22,13 @@ class UseCaseTests: XCTestCase {
     
     func testCallFetchPosts() throws {
         
-        let success = { (posts: Posts) in  }
+        let success = { (posts: [PostViewEntity]) in  }
+        let successPosts = { (posts: Posts) in  }
         let failure = { (error: CustomError)  in }
         
         postsUseCase?.execute(success: success, failure: failure)
         
-        postRepository?.verify(verificationMode: Once()).fetchPosts(type: AnyValue.string, success: success, failure: failure)
+        postRepository?.verify(verificationMode: Once()).fetchPosts(type: AnyValue.string, success: successPosts, failure: failure)
         
     }
     
@@ -35,14 +36,14 @@ class UseCaseTests: XCTestCase {
         
         let success = { (posts: Posts) in  }
         let failure = { (error: CustomError)  in }
-        let postsTest = Posts(kind: "kind", data: nil)
+        let postsTest = FactoryData.posts()
         _ = postRepository?.when().call(withReturnValue: postRepository.fetchPosts(type: AnyValue.string, success: success, failure: failure ), andArgumentMatching: [Anything(), Anything()]).thenDo {  (args: [Any?]) -> Void in
             
             (args[0] as! (Posts) -> (Void))(postsTest)
         }
         
         postsUseCase?.execute(success: { posts in
-            XCTAssertEqual(posts.kind, postsTest.kind)
+            XCTAssertEqual(posts.count, 1)
         }, failure: { _ in
             XCTAssert(false)
         })
