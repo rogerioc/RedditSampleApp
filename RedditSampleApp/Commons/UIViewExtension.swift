@@ -45,6 +45,14 @@ extension UIView {
             bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: bottom)
             ])
     }
+    
+    public func centered() {
+        guard let superview = self.superview else {
+            return
+        }
+        self.centerYAnchor.constraint(equalTo: superview.centerYAnchor).isActive = true
+        self.centerXAnchor.constraint(equalTo: superview.centerXAnchor).isActive = true
+    }
 
     static func withHeight(_ height: CGFloat) -> UIView {
         let view = UIView()

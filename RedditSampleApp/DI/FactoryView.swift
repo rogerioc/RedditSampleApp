@@ -18,6 +18,10 @@ final class FactoryView: FactoryViewType {
     func makeHomeView() -> HomeViewType {
         let postListViewModel = factoryViewModel.makeViewPostListViewModel()
         return HomeView(postListViewModelType: postListViewModel)
-    }    
+    }
+    
+    func makeDetailView() -> DetailViewType {
+        return DetailView() 
+    }
     
 }

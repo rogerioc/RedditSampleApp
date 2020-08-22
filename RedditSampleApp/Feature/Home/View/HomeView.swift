@@ -50,8 +50,7 @@ final class HomeView: DefaultUIView, HomeViewType {
     
     override func setupConstraints() {
         list.bindFrameToSuperviewBounds()
-        loadingIndicator.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        loadingIndicator.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        loadingIndicator.centered()
     }
     
     private func setLoading(with loading: Bool) {

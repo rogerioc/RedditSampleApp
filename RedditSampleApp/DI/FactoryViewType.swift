@@ -9,5 +9,6 @@
 import Foundation
 protocol FactoryViewType {
     func makeHomeView() -> HomeViewType
+    func makeDetailView() -> DetailViewType
 }
 

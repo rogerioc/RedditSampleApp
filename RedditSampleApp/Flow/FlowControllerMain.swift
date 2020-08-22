@@ -35,7 +35,9 @@ final class FlowControllerMain: FlowControllerType {
 
 extension FlowControllerMain: HomeViewFlowDelegate {
     func flow(to: HomeFlow) {
-        
+        let flow = FlowControllerDetail(navigationController: navigationController,
+                                        factory: factory)
+        flow.start()
     }
     
     
